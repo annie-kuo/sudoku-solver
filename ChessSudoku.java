@@ -1,5 +1,3 @@
-package finalproject;
-
 import java.util.*;
 import java.io.*;
 
@@ -28,9 +26,7 @@ public class ChessSudoku
 	public HashSet<ChessSudoku> solutions = new HashSet<ChessSudoku>();
 
 
-	/* The solve() method should remove all the unknown characters ('x') in the grid
-	 * and replace them with the numbers in the correct range that satisfy the constraints
-	 * of the Sudoku puzzle. If true is provided as input, the method should find finds ALL 
+	/* If true is provided as input, the method should find finds ALL 
 	 * possible solutions and store them in the field named solutions. */
 	public void solve(boolean allSolutions) {
 		if (! allSolutions) {
@@ -289,11 +285,6 @@ public class ChessSudoku
 	}
 
 
-
-	/*****************************************************************************/
-	/* NOTE: YOU SHOULD NOT HAVE TO MODIFY ANY OF THE METHODS BELOW THIS LINE. */
-	/*****************************************************************************/
-
 	/* Default constructor.  This will initialize all positions to the default 0
 	 * value.  Use the read() function to load the Sudoku puzzle from a file or
 	 * the standard input. */
@@ -412,40 +403,8 @@ public class ChessSudoku
 	 * Sudoku puzzle is loaded from that file.  It then solves the puzzle, and
 	 * outputs the completed puzzle to the standard output. */
 	public static void main( String args[] ) throws Exception {
-		String ex1 = "easy3x3.txt";
-		String ex2 = "hard3x3.txt";
-		String ex3 = "hard4x4.txt";
-		String ex4 = "harder3x3.txt";
-		String ex5 = "harder5x5.txt";
-		String ex6 = "kingMultipleSolutions3x3.txt";
-		String ex7 = "kingQueen3x3.txt";
-		String ex8 = "kingSudokuEasy3x3.txt";
-		String ex9 = "knightKing3x3.txt";
-		String ex10 = "knightKing4x4.txt";
-		String ex11 = "knightKingQueen5x5.txt";
-		String ex12 = "knightKingQueenTemplate5x5.txt";
-		String ex13 = "knightMultipleSolutions3x3.txt";
-		String ex14 = "knightOneSolution3x3.txt";
-		String ex15 = "knightSudokuEasy3x3.txt";
-		String ex16 = "knightSudokuHard3x3.txt";
-		String ex17 = "knightSudokuMedium3x3.txt";
-		String ex18 = "medium3x3.txt";
-		String ex19 = "medium3x3_eightSolutions.txt";
-		String ex20 = "medium3x3_twelveSolutions.txt";
-		String ex21 = "queen4x4.txt";
-		String ex22 = "queen5x5.txt";
-		String ex23 = "queenMultipleSolutions3x3.txt";
-		String ex24 = "queenSudokuEasy3x3.txt";
-		String ex25 = "veryEasy3x3.txt";
-		String ex26 = "veryEasy3x3_twoSolutions.txt";
-		String ex27 = "veryEasy4x4.txt";
-		String ex28 = "veryHard3x3.txt";
-		String ex29 = "veryHard4x4.txt";
-		String ex30 = "veryHard5x5.txt";
-		String ex31 = "test.txt";
-
 		String start = "C:\\Users\\annie\\Desktop\\McGill\\WINTER 2021\\COMP250- Intro to Computer Science\\Lecture Codes\\";
-		String toTest = start + ex29;
+		String toTest = "test.txt";
 		InputStream in = new FileInputStream(toTest);
 
 		// The first number in all Sudoku files must represent the size of the puzzle.  See
@@ -458,7 +417,7 @@ public class ChessSudoku
 
 		ChessSudoku s = new ChessSudoku( puzzleSize );
 		
-		// You can modify these to add rules to your sudoku
+		// Modify these to add rules to your sudoku
 		s.knightRule = false;
 		s.kingRule = false;
 		s.queenRule = false;
